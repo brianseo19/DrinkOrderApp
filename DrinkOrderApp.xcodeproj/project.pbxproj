@@ -8,18 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		863E163C276C167800280731 /* DrinkOrderAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863E163B276C167800280731 /* DrinkOrderAppApp.swift */; };
-		863E163E276C167800280731 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863E163D276C167800280731 /* ContentView.swift */; };
 		863E1640276C167B00280731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 863E163F276C167B00280731 /* Assets.xcassets */; };
 		863E1643276C167B00280731 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 863E1642276C167B00280731 /* Preview Assets.xcassets */; };
+		863E164B276C171D00280731 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863E164A276C171D00280731 /* HomeScreenView.swift */; };
+		863E164D276C3BBB00280731 /* PlaceOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863E164C276C3BBB00280731 /* PlaceOrderView.swift */; };
+		863E164F276C3BC500280731 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863E164E276C3BC500280731 /* MenuView.swift */; };
+		863E1651276C3BD900280731 /* OrderHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863E1650276C3BD900280731 /* OrderHistoryView.swift */; };
+		863E1653276C641A00280731 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863E1652276C641A00280731 /* Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		863E1638276C167800280731 /* DrinkOrderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkOrderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		863E163B276C167800280731 /* DrinkOrderAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkOrderAppApp.swift; sourceTree = "<group>"; };
-		863E163D276C167800280731 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		863E163F276C167B00280731 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		863E1642276C167B00280731 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		863E1644276C167B00280731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		863E164A276C171D00280731 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		863E164C276C3BBB00280731 /* PlaceOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOrderView.swift; sourceTree = "<group>"; };
+		863E164E276C3BC500280731 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		863E1650276C3BD900280731 /* OrderHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryView.swift; sourceTree = "<group>"; };
+		863E1652276C641A00280731 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +61,11 @@
 			isa = PBXGroup;
 			children = (
 				863E163B276C167800280731 /* DrinkOrderAppApp.swift */,
-				863E163D276C167800280731 /* ContentView.swift */,
+				863E164A276C171D00280731 /* HomeScreenView.swift */,
+				863E1652276C641A00280731 /* Order.swift */,
+				863E164C276C3BBB00280731 /* PlaceOrderView.swift */,
+				863E164E276C3BC500280731 /* MenuView.swift */,
+				863E1650276C3BD900280731 /* OrderHistoryView.swift */,
 				863E163F276C167B00280731 /* Assets.xcassets */,
 				863E1644276C167B00280731 /* Info.plist */,
 				863E1641276C167B00280731 /* Preview Content */,
@@ -138,8 +150,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				863E163E276C167800280731 /* ContentView.swift in Sources */,
+				863E1653276C641A00280731 /* Order.swift in Sources */,
 				863E163C276C167800280731 /* DrinkOrderAppApp.swift in Sources */,
+				863E164F276C3BC500280731 /* MenuView.swift in Sources */,
+				863E1651276C3BD900280731 /* OrderHistoryView.swift in Sources */,
+				863E164B276C171D00280731 /* HomeScreenView.swift in Sources */,
+				863E164D276C3BBB00280731 /* PlaceOrderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
