@@ -7,17 +7,28 @@
 
 import SwiftUI
  
-struct Order {
-    var Drinks: [Drink]
-    var date: Date
+class OrderStore: ObservableObject {
+    @Published var orders = [Order]()
     
-    init(Drinks: [Drink], date: Date) {
-        self.Drinks = Drinks
-        self.date = date
+    func addOrder(drinks: [Drink]) {
+        orders.append(Order(Drinks: drinks, date: Date()))
     }
 }
 
-struct Drink {
+struct Order: Identifiable {
+    var id: UUID
+    var Drinks: [Drink]
+    var date: Date
+    
+    init(id: UUID = UUID(), Drinks: [Drink], date: Date) {
+        self.id = id
+        self.Drinks = Drinks
+        self.date = date
+    }
+    
+}
+
+struct Drink: Hashable {
     var type: String
     var size: String
     
@@ -27,8 +38,3 @@ struct Drink {
     }
 }
 
-extension Order {
-    static var orders: [Order] {
-        []
-    }
-}

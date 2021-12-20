@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeScreenView: View {
     @State private var placeOrder = false
     @State private var orderHistory = false
+    @StateObject var orderStore = OrderStore()
     
     var body: some View {
         NavigationView {
@@ -23,7 +24,7 @@ struct HomeScreenView: View {
                     .shadow(radius: 10)
                 
                 NavigationLink(
-                    destination: PlaceOrderView(),
+                    destination: PlaceOrderView(orderStore: orderStore),
                     isActive: $placeOrder,
                     label:{
                         Button(action: {placeOrder.toggle()}, label: {
@@ -41,7 +42,7 @@ struct HomeScreenView: View {
                 
                 
                 NavigationLink(
-                    destination: OrderHistoryView(),
+                    destination: OrderHistoryView(orders: orderStore.orders),
                     isActive: $orderHistory,
                     label: {
                         Button(action: {orderHistory.toggle()}, label: {

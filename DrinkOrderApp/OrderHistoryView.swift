@@ -8,35 +8,44 @@
 import SwiftUI
 
 struct OrderHistoryView: View {
+    let orders: [Order]
     var body: some View {
-        VStack {
-            DrinkCardView()
-            DrinkCardView()
-            DrinkCardView()
+        
+        List(orders) { order in
+            DrinkCardView(drinks: order.Drinks, date: order.date)
         }
+
     }
 }
 
 struct OrderHistoryView_Previews: PreviewProvider {
     static var previews: some View {
-        OrderHistoryView()
+        OrderHistoryView(orders: [Order(Drinks: [Drink(type: "Coffee", size: "Small")], date: Date())])
     }
 }
 
 struct DrinkCardView: View {
+    let drinks: [Drink]
+    let date: Date
+    
     var body: some View {
         VStack {
-            Text("Order for 11/15/2021")
-                .font(.system(size: 20))
-                .fontWeight(.semibold)
+            HStack {
+                Text(date, style: .date)
+                    .font(.system(size: 20))
+                    .fontWeight(.semibold)
+                Text(date, style: .time)
+                    .font(.system(size: 20))
+                    .fontWeight(.semibold)
+            }
             VStack {
-                Text("Drink One")
-                Text("Drink Two")
-                Text("Drink Three")
+                ForEach(drinks, id: \.self) { drink in
+                    Text("\(drink.type) - \(drink.size)")
+                }
             }
             
         }
-        .frame(minWidth: 0, idealWidth: 100, maxWidth: .infinity, minHeight: 0, idealHeight: 100, maxHeight: 125, alignment: .center)
+        .frame(minWidth: 0, idealWidth: 100, maxWidth: .infinity, minHeight: 0, idealHeight: 100, maxHeight: 200, alignment: .center)
         .background(Color(.systemGray5))
         .cornerRadius(10)
         .padding(.horizontal)

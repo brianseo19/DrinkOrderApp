@@ -11,6 +11,7 @@ struct MenuView: View {
     @State private var size: String = ""
     @State private var drink: String = ""
     @Binding var isShowingMenu: Bool
+    @Binding var newOrder: [Drink]
     
     var body: some View {
         VStack {
@@ -20,6 +21,7 @@ struct MenuView: View {
                     Button(action: {
                         self.size = "Small"
                         self.drink = "Coffee"
+                        placeOrder()
                         isShowingMenu.toggle()
                     }, label: {
                         Text("Small")
@@ -27,6 +29,7 @@ struct MenuView: View {
                     Button(action: {
                         self.size = "Medium"
                         self.drink = "Coffee"
+                        placeOrder()
                         isShowingMenu.toggle()
                     }, label: {
                         Text("Medium")
@@ -34,6 +37,7 @@ struct MenuView: View {
                     Button(action: {
                         self.size = "Large"
                         self.drink = "Coffee"
+                        placeOrder()
                         isShowingMenu.toggle()
                     }, label: {
                         Text("Large")
@@ -48,6 +52,7 @@ struct MenuView: View {
                     Button(action: {
                         self.size = "Small"
                         self.drink = "Water"
+                        placeOrder()
                         isShowingMenu.toggle()
                     }, label: {
                         Text("Small")
@@ -55,6 +60,7 @@ struct MenuView: View {
                     Button(action: {
                         self.size = "Medium"
                         self.drink = "Water"
+                        placeOrder()
                         isShowingMenu.toggle()
                     }, label: {
                         Text("Medium")
@@ -62,6 +68,7 @@ struct MenuView: View {
                     Button(action: {
                         self.size = "Large"
                         self.drink = "Water"
+                        placeOrder()
                         isShowingMenu.toggle()
                     }, label: {
                         Text("Large")
@@ -79,6 +86,7 @@ struct MenuView: View {
                     Button(action: {
                         self.size = "Small"
                         self.drink = "Latte"
+                        placeOrder()
                         isShowingMenu.toggle()
                     }, label: {
                         Text("Small")
@@ -86,6 +94,7 @@ struct MenuView: View {
                     Button(action: {
                         self.size = "Medium"
                         self.drink = "Latte"
+                        placeOrder()
                         isShowingMenu.toggle()
                     }, label: {
                         Text("Medium")
@@ -93,6 +102,7 @@ struct MenuView: View {
                     Button(action: {
                         self.size = "Large"
                         self.drink = "Latte"
+                        placeOrder()
                         isShowingMenu.toggle()
                     }, label: {
                         Text("Large")
@@ -107,6 +117,7 @@ struct MenuView: View {
                     Button(action: {
                         self.size = "Small"
                         self.drink = "Smoothie"
+                        placeOrder()
                         isShowingMenu.toggle()
                     }, label: {
                         Text("Small")
@@ -114,6 +125,7 @@ struct MenuView: View {
                     Button(action: {
                         self.size = "Medium"
                         self.drink = "Smoothie"
+                        placeOrder()
                         isShowingMenu.toggle()
                     }, label: {
                         Text("Medium")
@@ -121,6 +133,7 @@ struct MenuView: View {
                     Button(action: {
                         self.size = "Large"
                         self.drink = "Smoothie"
+                        placeOrder()
                         isShowingMenu.toggle()
                     }, label: {
                         Text("Large")
@@ -139,6 +152,7 @@ struct MenuView: View {
                     Button(action: {
                         self.size = "Small"
                         self.drink = "Tea"
+                        placeOrder()
                         isShowingMenu.toggle()
                     }, label: {
                         Text("Small")
@@ -146,6 +160,7 @@ struct MenuView: View {
                     Button(action: {
                         self.size = "Medium"
                         self.drink = "Tea"
+                        placeOrder()
                         isShowingMenu.toggle()
                     }, label: {
                         Text("Medium")
@@ -153,6 +168,7 @@ struct MenuView: View {
                     Button(action: {
                         self.size = "Large"
                         self.drink = "Tea"
+                        placeOrder()
                         isShowingMenu.toggle()
                     }, label: {
                         Text("Large")
@@ -166,6 +182,7 @@ struct MenuView: View {
                     Button(action: {
                         self.size = "Small"
                         self.drink = "Boba"
+                        placeOrder()
                         isShowingMenu.toggle()
                     }, label: {
                         Text("Small")
@@ -173,6 +190,7 @@ struct MenuView: View {
                     Button(action: {
                         self.size = "Medium"
                         self.drink = "Boba"
+                        placeOrder()
                         isShowingMenu.toggle()
                     }, label: {
                         Text("Medium")
@@ -180,6 +198,7 @@ struct MenuView: View {
                     Button(action: {
                         self.size = "Large"
                         self.drink = "Boba"
+                        placeOrder()
                         isShowingMenu.toggle()
                     }, label: {
                         Text("Large")
@@ -194,7 +213,7 @@ struct MenuView: View {
     }
     
     func placeOrder() {
-        
+        newOrder.append(Drink(type: drink, size: size))
     }
 }
 
